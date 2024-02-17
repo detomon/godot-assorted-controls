@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=3 uid="uid://epdgsi1487j2"]
+
+[ext_resource type="Theme" uid="uid://cjdaratqyt27k" path="res://addons/detomon.assorted-controls/theme/theme.tres" id="1_5kbdv"]
+[ext_resource type="Script" path="res://addons/detomon.assorted-controls/gui/range_slider/h_range_slider.gd" id="2_gb7pa"]
+[ext_resource type="Script" path="res://addons/detomon.assorted-controls/gui/hv_slider/hv_slider.gd" id="2_hquml"]
+[ext_resource type="Script" path="res://addons/detomon.assorted-controls/gui/range_slider/v_range_slider.gd" id="3_0yavn"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_5kbdv")
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+alignment = 1
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer1"]
+layout_mode = 2
+text = "Basic HVSlider "
+horizontal_alignment = 1
+
+[node name="HVSlider" type="Control" parent="HFlowContainer/VBoxContainer1"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("2_hquml")
+value = Vector2(0.7, 0.8)
+tick_count_h = 0
+tick_count_v = 0
+show_guides = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "HVSlider  with guide lines"
+horizontal_alignment = 1
+
+[node name="HVSlider" type="Control" parent="HFlowContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("2_hquml")
+value = Vector2(0.1, 0.15)
+tick_count_h = 3
+tick_count_v = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Basic HRangeSlider"
+horizontal_alignment = 1
+
+[node name="HRangeSlider" type="Control" parent="HFlowContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("2_gb7pa")
+start_value = 0.25
+end_value = 0.75
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer4"]
+layout_mode = 2
+text = "HRangeSlider with ticks"
+horizontal_alignment = 1
+
+[node name="HRangeSlider" type="Control" parent="HFlowContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("2_gb7pa")
+start_value = 0.25
+end_value = 0.75
+tick_count = 4
+ticks_on_borders = true
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="HFlowContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer5"]
+layout_mode = 2
+text = "Basic VRangeSlider"
+horizontal_alignment = 1
+
+[node name="VRangeSlider" type="Control" parent="HFlowContainer/VBoxContainer5"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+script = ExtResource("3_0yavn")
+start_value = 0.25
+end_value = 0.75
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="HFlowContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer6"]
+layout_mode = 2
+text = "VRangeSlider with ticks"
+horizontal_alignment = 1
+
+[node name="VRangeSlider" type="Control" parent="HFlowContainer/VBoxContainer6"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+script = ExtResource("3_0yavn")
+start_value = 0.25
+end_value = 0.75
+tick_count = 4
+ticks_on_borders = true

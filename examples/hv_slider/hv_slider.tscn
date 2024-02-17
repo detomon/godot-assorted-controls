@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://djf7fg0bis2sd"]
+
+[ext_resource type="Script" path="res://addons/detomon.assorted-controls/gui/hv_slider/hv_slider.gd" id="1_mll08"]
+[ext_resource type="Theme" uid="uid://cjdaratqyt27k" path="res://addons/detomon.assorted-controls/theme/theme.tres" id="1_v0je4"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v0je4")
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 32
+alignment = 1
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer1"]
+layout_mode = 2
+text = "Basic"
+horizontal_alignment = 1
+
+[node name="HVSlider" type="Control" parent="HFlowContainer/VBoxContainer1"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_mll08")
+value = Vector2(0.7, 0.8)
+tick_count_h = 0
+tick_count_v = 0
+show_guides = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer2"]
+layout_mode = 2
+text = "With guide lines"
+horizontal_alignment = 1
+
+[node name="HVSlider" type="Control" parent="HFlowContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_mll08")
+value = Vector2(0.1, 0.15)
+tick_count_h = 3
+tick_count_v = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HFlowContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Without guide lines"
+horizontal_alignment = 1
+
+[node name="HVSlider" type="Control" parent="HFlowContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_mll08")
+value = Vector2(0.1, 0.15)
+min_value = Vector2(-1, -1)
+tick_count_h = 5
+tick_count_v = 4
+show_guides = false
+
+[node name="Label" type="Label" parent="HFlowContainer"]
+layout_mode = 2
+text = "Theme (res://addons/detomon.assorted-controls/theme/theme.tres) is set on the scene root node (MarginContainer)."

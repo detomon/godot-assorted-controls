@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://cjdaratqyt27k"]
+
+[ext_resource type="Texture2D" uid="uid://bh53q4ljhca6k" path="res://addons/detomon.assorted-controls/theme/icons/grabber_right.svg" id="1_ojk2e"]
+[ext_resource type="Texture2D" uid="uid://pk3gxtrx7kks" path="res://addons/detomon.assorted-controls/theme/icons/grabber_left.svg" id="2_p18at"]
+[ext_resource type="Texture2D" uid="uid://brrchb35i8mdy" path="res://addons/detomon.assorted-controls/theme/icons/grabber_right_disabled.svg" id="2_xl0h2"]
+[ext_resource type="Texture2D" uid="uid://b7k0qhmbtr07q" path="res://addons/detomon.assorted-controls/theme/icons/grabber_right_highlight.svg" id="3_lptiy"]
+[ext_resource type="Texture2D" uid="uid://ba4cawhogr2x3" path="res://addons/detomon.assorted-controls/theme/icons/grabber_left_disabled.svg" id="5_vhouj"]
+[ext_resource type="Texture2D" uid="uid://jsvg157mmypi" path="res://addons/detomon.assorted-controls/theme/icons/grabber_left_highlight.svg" id="6_pdci5"]
+[ext_resource type="Texture2D" uid="uid://ch3oaxqkdfo4h" path="res://addons/detomon.assorted-controls/theme/icons/grabber_top.svg" id="7_esx2h"]
+[ext_resource type="Texture2D" uid="uid://cr8yatv3g82ok" path="res://addons/detomon.assorted-controls/theme/icons/grabber_top_disabled.svg" id="8_bcwjm"]
+[ext_resource type="Texture2D" uid="uid://b5pojjao0ywx5" path="res://addons/detomon.assorted-controls/theme/icons/grabber_top_highlight.svg" id="9_jm73v"]
+[ext_resource type="Texture2D" uid="uid://7t1bx7vd8oi3" path="res://addons/detomon.assorted-controls/theme/icons/grabber_bottom.svg" id="10_lesng"]
+[ext_resource type="Texture2D" uid="uid://c2nubncitivba" path="res://addons/detomon.assorted-controls/theme/icons/grabber_bottom_disabled.svg" id="11_25iyq"]
+[ext_resource type="Texture2D" uid="uid://ceo8c8st4ngbw" path="res://addons/detomon.assorted-controls/theme/icons/grabber_bottom_highlight.svg" id="12_60fhb"]
+
+[resource]
+HRangeSlider/constants/grabber_area_drag_margin = 4
+HRangeSlider/constants/grabber_drag_margin = 2
+HRangeSlider/icons/grabber_high = ExtResource("1_ojk2e")
+HRangeSlider/icons/grabber_high_disabled = ExtResource("2_xl0h2")
+HRangeSlider/icons/grabber_high_highlight = ExtResource("3_lptiy")
+HRangeSlider/icons/grabber_low = ExtResource("2_p18at")
+HRangeSlider/icons/grabber_low_disabled = ExtResource("5_vhouj")
+HRangeSlider/icons/grabber_low_highlight = ExtResource("6_pdci5")
+HVSlider/colors/guide = Color(1, 1, 1, 0.247059)
+HVSlider/colors/guide_highlight = Color(1, 1, 1, 0.878431)
+HVSlider/colors/tick = Color(1, 1, 1, 0.0784314)
+HVSlider/constants/grabber_drag_margin = 2
+HVSlider/constants/guide_drag_margin = 4
+HVSlider/constants/guide_width = 2
+HVSlider/constants/tick_width = 2
+VRangeSlider/constants/grabber_area_drag_margin = 4
+VRangeSlider/constants/grabber_drag_margin = 2
+VRangeSlider/icons/grabber_high = ExtResource("7_esx2h")
+VRangeSlider/icons/grabber_high_disabled = ExtResource("8_bcwjm")
+VRangeSlider/icons/grabber_high_highlight = ExtResource("9_jm73v")
+VRangeSlider/icons/grabber_low = ExtResource("10_lesng")
+VRangeSlider/icons/grabber_low_disabled = ExtResource("11_25iyq")
+VRangeSlider/icons/grabber_low_highlight = ExtResource("12_60fhb")
