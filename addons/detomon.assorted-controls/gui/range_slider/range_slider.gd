@@ -461,10 +461,9 @@ func _get_grabber_rect(element: Element) -> Rect2i:
 
 	match element:
 		Element.GRABBER_LOW:
-			var offset := clampf(remap(start_value, min_value, max_value, 0.0, 1.0), 0.0, 1.0)
-			# Minimum and maximum of the horizontal axis is the same.
-			if not is_finite(offset):
-				offset = max_value
+			var offset := clampf(remap(start_value, min_value, max_value, 0.0, 1.0), 0.0, 1.0) \
+				if not is_equal_approx(min_value, max_value) \
+				else max_value
 
 			match _orientation:
 				Orientation.HORIZONTAL:
@@ -476,10 +475,9 @@ func _get_grabber_rect(element: Element) -> Rect2i:
 			grabber_rect.size = Vector2i(grabber_size_low)
 
 		Element.GRABBER_HIGH:
-			var offset := clampf(remap(end_value, min_value, max_value, 0.0, 1.0), 0.0, 1.0)
-			# Minimum and maximum of the horizontal axis is the same.
-			if not is_finite(offset):
-				offset = max_value
+			var offset := clampf(remap(end_value, min_value, max_value, 0.0, 1.0), 0.0, 1.0) \
+				if not is_equal_approx(min_value, max_value) \
+				else max_value
 
 			match _orientation:
 				Orientation.HORIZONTAL:
@@ -602,16 +600,18 @@ func _set_drag_element(value: Element) -> void:
 		return
 
 	_drag_element = value
-	queue_redraw()
 
 	if _drag_element:
 		_start_value_before_dragging = start_value
 		_end_value_before_dragging = end_value
 		drag_started.emit()
+
 	else:
-		var value_changed := start_value != _start_value_before_dragging \
+		var has_changed := start_value != _start_value_before_dragging \
 			or end_value != _end_value_before_dragging
-		drag_ended.emit(value_changed)
+		drag_ended.emit(has_changed)
+
+	queue_redraw()
 
 
 func _set_highlight_element(value: Element) -> void:
