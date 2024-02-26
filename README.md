@@ -14,6 +14,12 @@ An incomplete collection of various control nodes.
 
 ## Installation
 
+1. Search for `Assorted Controls` in the `AssetLib` editor tab.
+2. Download and install the plugin.
+3. Enable the plugin in the project settings via the `Plugins` tab.
+
+or...
+
 1. Clone this repository or download the archive.
 2. Copy the folder `addons/detomon.assorted-controls` to your project's `addons` folder (create it if needed).
 3. Enable the plugin in the project settings via the `Plugins` tab.
