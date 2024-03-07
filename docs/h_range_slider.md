@@ -26,7 +26,7 @@ A slider that goes from left (`min_value`) to right (`max_value`), used to adjus
 | `changed()` | Emitted when `min_value`, `max_value`, or `step` changes. |
 | `value_changed(start_value: float, end_value: float)` | Emitted when `start_value` or `end_value` changes. |
 | `drag_started()` | Emitted when dragging of an element starts. This is emitted before the corresponding `value_changed()` signal. |
-| `drag_ended(value_changed: bool)` | Emitted when dragging of an element ends. If `value_changed` is true, `start_value` or `member end_value` is different from the value when dragging was started. |
+| `drag_ended(value_changed: bool)` | Emitted when dragging of an element ends. If `value_changed` is `true`, `start_value` or `member end_value` is different from the value when dragging was started. |
 
 ### Theme
 

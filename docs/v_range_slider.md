@@ -26,7 +26,7 @@ A slider that goes from bottom (`min_value`) to top (`max_value`), used to adjus
 | `changed()` | Emitted when `min_value`, `max_value`, or `step` changes. |
 | `value_changed(start_value: float, end_value: float)` | Emitted when `start_value` or `end_value` changes. |
 | `drag_started()` | Emitted when dragging of an element starts. This is emitted before the corresponding `value_changed()` signal. |
-| `drag_ended(value_changed: bool)` | Emitted when dragging of an element ends. If `value_changed` is true, `start_value` or `member end_value` is different from the value when dragging was started. |
+| `drag_ended(value_changed: bool)` | Emitted when dragging of an element ends. If `value_changed` is `true`, `start_value` or `member end_value` is different from the value when dragging was started. |
 
 ### Theme
 
@@ -59,4 +59,4 @@ The following theme properties can be overidden in a custom theme to change the 
 |---|---|
 | `slider` (inherited) | Slider box. Default: `VSlider/styles/slider`. |
 | `grabber_area` (inherited) | Area drawn between range grabbers. Default: `VSlider/styles/grabber_area `. |
-| `grabber_area_highlight` (inherited) | Area drawn between range grabbers when highlighted. Default: `VVSlider/styles/grabber_area_highlight`. |
+| `grabber_area_highlight` (inherited) | Area drawn between range grabbers when highlighted. Default: `VSlider/styles/grabber_area_highlight`. |
